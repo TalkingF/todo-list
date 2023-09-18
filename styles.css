@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    font-size: 1rem;
+}
+
+body {
+    background: rgb(27, 27, 27);    
+}
+
+
+.nav {
+    background-color: rgb(156, 126, 255);
+    display: flex;
+    height: 80px;
+    
+}
+
+.nav-button {
+    background: rgb(9, 9, 9);
+    border: solid;
+    border-color: rgb(9, 9, 9);
+    border-radius: 8px;
+    margin: 10px 20px;
+    padding-right: 20px;
+    padding-left: 20px; 
+}
+
+.nav-button:hover {
+    border: solid;
+    border-color: rgb(255, 255, 255);
+}
+
+.grid-container{
+    display: grid;
+    margin: 30px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.container {
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  
+}
+
+.container-title {
+    font-size: 3rem; 
+    margin-bottom: 10px;
+    border-bottom: solid;
+    border-color: rgb(255, 255, 255);
+}
+
+.container-tag {
+    display: inline-block; 
+    background-color: blue; 
+    width: 10px; 
+    height: 10px; 
+    border-radius: 5px; 
+    margin-left: 98%; 
+    margin-top: 30%;
+}
+
+.container-description {
+    font-size: 1rem;
+}
+
+@media only screen and (min-width: 400px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+  }
+
+@media only screen and (min-width: 800px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
