@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
         <link rel="stylesheet" href="styles.css">
         <title>todo-list</title>
     </head>
@@ -29,24 +29,6 @@
             <input class="nav-button" value="Search" onfocus="this.value=''"></input>
         </nav>
         
-        <div id="grid-container">
-            <div class="container">
-                <form style="height: inherit;">
-                    <input class="container-title" placeholder="Title" ></input>
-                    <textarea class="container-description" maxlength="400" placeholder="Description (400 characters)"></textarea>
-                    <select class="container-tag">
-                        <option selected disabled hidden>Importance</option>  
-                        <option>Urgent</option>
-                        <option>Important</option>
-                        <option>To do</option>
-                    </select>
-                    <input class="submit-button" type="submit" value="✓"></input>
-                    <button class="cancel-button">✕</button>
-                </form>
-                
-            </div>
-        </div>
-
-
+        <div id="grid-container"></div>
     </body>
 </html>
