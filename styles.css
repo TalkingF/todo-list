@@ -62,6 +62,7 @@ body {
     border-bottom: solid;
     border-color: rgb(255, 255, 255);
     outline: none;
+    overflow-y: none;
 }
 
 .container-tag {
