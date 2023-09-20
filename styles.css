@@ -139,7 +139,7 @@ body {
     left: 176px;
 }
 
-.cancel:hover, .submit:hover, .container-tag {
+.cancel:hover, .submit:hover, .container-tag:hover, .edit:hover, .delete:hover {
     cursor: pointer;
 }
 

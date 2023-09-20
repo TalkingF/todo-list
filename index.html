@@ -12,9 +12,9 @@
         <title>todo-list</title>
     </head>
 
-    <body>
+    <body onload="retrieveTasks();">
         <nav class="nav">
-            <button class="nav-button" onclick="displayNewTask()">
+            <button class="nav-button" onclick="displayNewTask();">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="60" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M12 5l0 14"></path>
@@ -28,7 +28,6 @@
             </select>
             <input class="nav-button" value="Search" onfocus="this.value=''"></input>
         </nav>
-        
         <div id="grid-container"></div>
     </body>
 </html>
