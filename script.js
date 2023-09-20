@@ -1,6 +1,6 @@
-//window.localStorage.clear();
+//pulls count from local storage or sets to 0 on first visit
 let count;
-const max_tasks = 99;
+
 if (window.localStorage.getItem("count") === null) {
     count = 0;
 }
@@ -9,7 +9,9 @@ else {
     count = window.localStorage.getItem("count");
 }
 
+//pulls json of tasks from storage and display calls each task
 function retrieveTasks() {
+    const max_tasks = 99;
     num_tasks = window.localStorage.getItem("count");
     for (let i = 0; i < num_tasks;  i++) {
         if (window.localStorage.getItem(`task-${i}`) === null && i < max_tasks) {
@@ -21,6 +23,7 @@ function retrieveTasks() {
     }
 }
 
+//display's a new task that is in and editable state
 function displayNewTask() {
     if (document.getElementById("new-task") === null) {
         document.getElementById("grid-container").innerHTML += `            
@@ -41,6 +44,7 @@ function displayNewTask() {
     }
 }
 
+//converts a task pane to an editable task
 function displayEditableTask(id) {
     const task = window.localStorage.getItem(id);
     const obj = JSON.parse(task);
@@ -62,22 +66,22 @@ function displayEditableTask(id) {
     deleteTaskPane(id);
 }
 
+//responsible for deleting an incomplete task
 function deleteNewTask() {
     if (document.getElementById("new-task")) {
         document.getElementById("new-task").outerHTML = "";
     }
-    
 }
 
+//deletes a task pane and removes from local storage
 function deleteTaskPane(id) {
     document.getElementById(id).outerHTML = "";
     window.localStorage.removeItem(id);
     count--;
-    window.localStorage.setItem("count", count);
-    
-    
+    window.localStorage.setItem("count", count);  
 }
 
+//converts an editable task to a static task pane, with options to edit 
 function displayTaskPane(task, index) {
     deleteNewTask();
     document.getElementById("grid-container").innerHTML += `
@@ -91,6 +95,7 @@ function displayTaskPane(task, index) {
     `
 }
 
+//listens for form submit, collects form into json, adds to local storage and calls conversion to pane
 function onFormSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
